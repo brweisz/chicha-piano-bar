@@ -1,121 +1,217 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Chicha Piano Bar</title>
-    <style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <style type="text/tailwindcss">
         :root {
-            --color1: #F2E5D5; /* fondo claro */
-            --color2: #F2CB07; /* amarillo */
-            --color3: #F2762E; /* naranja */
-            --color4: #6D473A; /* marrón */
-            --color5: #141526; /* azul oscuro */
+            --background-color: #F2E5D5;
+            --button-background: #F2762E;
+            --text-color: #141526;
+            --chord-color: #6D473A;
+            --details-color: #F2CB07;
+            --brand-brown: var(--chord-color);
+            --brand-dark-blue: var(--text-color);
+            --brand-yellow: var(--details-color);
+            --brand-beige: var(--background-color);
+            --brand-orange: var(--button-background);
+            --active-tab-border: var(--brand-orange);
+            --active-tab-text: var(--brand-dark-blue);
         }
-
         body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: var(--color1);
-            color: var(--color5);
+            font-family: 'Roboto', sans-serif;
+            min-height: max(884px, 100dvh);
+            background-color: var(--background-color);
+            color: var(--text-color);
         }
-
-        header {
-            background-color: var(--color3);
-            color: white;
-            padding: 2rem;
-            text-align: center;
+        .tab-content {
+            display: none;
         }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+        .tab-content.active {
+            display: block;
         }
-
-        header p {
-            font-size: 1.2rem;
+        .active {
+            color: var(--active-tab-text) !important;
+            border-bottom-color: var(--active-tab-border) !important;
         }
-
-        section {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 1.5rem;
-            border-radius: 10px;
-        }
-
-        .mision {
-            background-color: var(--color2);
-            color: var(--color5);
-        }
-
-        .vision {
-            background-color: var(--color4);
-            color: white;
-        }
-
-        .valores {
-            background-color: var(--color5);
-            color: white;
-        }
-
-        h2 {
-            margin-top: 0;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: var(--color3);
-            color: white;
-        }
-
-        .btn-instagram {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.8rem 1.5rem;
-            background-color: var(--color2);
-            color: var(--color5);
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-instagram:hover {
-            background-color: var(--color1);
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
         }
     </style>
 </head>
-<body>
+<body class="bg-[var(--background-color)] text-[var(--text-color)]">
+<div class="container mx-auto max-w-sm">
+    <header class="flex items-center justify-between py-4 px-2 mb-2">
+        <img src="logo.png" alt="logo" style="max-width: 45%"/>
+        <img src="isotipo.png" alt="Salchicha sobre piano" style="max-width: 25%"/>
+        <!--    <h1 class="text-3xl font-bold text-[var(&#45;&#45;text-color)]">Chicha Piano Bar</h1>-->
+    </header>
+    <main>
+        <div class="px-4">
+            <h2 class="text-2xl font-semibold text-[var(--text-color)]">Bohemian Rhapsody</h2>
+        </div>
+        <div class="lyrics-container px-4 pt-2 pb-8 h-[calc(100dvh-244px)] overflow-y-auto text-[var(--chord-color)] leading-relaxed text-lg">
+            <p>Is this the real life? Is this just fantasy?</p>
+            <p>Caught in a landslide, no escape from reality</p>
+            <p>Open your eyes, look up to the skies and see</p>
+            <p></p>I'm just a poor boy, I need no sympathy</p>
+            <p>Because I'm easy come, easy go</p>
+            <p>Little high, little low</p>
+            <p>Any way the wind blows doesn't really matter to me, to me</p>
+            <p></p>Mama, just killed a man</p>
+            <p>Put a gun against his head, pulled my trigger, now he's dead</p>
+            <p></p>Mama, life had just begun</p>
+            <p>But now I've gone and thrown it all away</p>
+            <p></p>Mama, ooh, didn't mean to make you cry</p>
+            <p>If I'm not back again this time tomorrow</p>
+            <p>Carry on, carry on as if nothing really matters</p>
+            <p>Too late, my time has come</p>
+            <p>Sends shivers down my spine, body's aching all the time</p>
+            <p></p>Goodbye, everybody, I've got to go</p>
+            <p>Gotta leave you all behind and face the truth</p>
+            <p></p>Mama, ooh (any way the wind blows)</p>
+            <p>I don't wanna die</p>
+            <p>I sometimes wish I'd never been born at all</p>
+            <p>I see a little silhouetto of a man</p>
+            <p></p>Scaramouche, Scaramouche, will you do the Fandango?</p>
+            <p>Thunderbolt and lightning, very, very frightening me</p>
+            <p>(Galileo) Galileo, (Galileo) Galileo, Galileo Figaro, magnifico</p>
+            <p>But I'm just a poor boy, nobody loves me</p>
+            <p></p>He's just a poor boy from a poor family</p>
+            <p>Spare him his life from this monstrosity</p>
+            <p>Easy come, easy go, will you let me go?</p>
+            <p></p>بِسْمِ ٱللَّٰهِ</p>
+            <p></p>No, we will not let you go (let him go)</p>
+            <p></p>بِسْمِ ٱللَّٰهِ</p>
+            <p>We will not let you go (let him go)</p>
+            <p></p>بِسْمِ ٱللَّٰهِ</p>
+            <p>We will not let you go (let me go)</p>
+            <p>Will not let you go (let me go)</p>
+            <p>Will not let you go (never, never, never, never let me go)</p>
+            <p></p>No, no, no, no, no, no, no</p>
+            <p></p>Oh, mamma mia, mamma mia</p>
+            <p>Mamma mia, let me go</p>
+            <p>Beelzebub has a devil put aside for me, for me, for me</p>
+            <p>So you think you can stone me and spit in my eye?</p>
+            <p>So you think you can love me and leave me to die?</p>
+            <p></p>Oh, baby, can't do this to me, baby</p>
+            <p>Just gotta get out, just gotta get right outta here</p>
+            <p></p>Ooh</p>
+            <p></p>Ooh, yeah, ooh, yeah</p>
+            <p>Nothing really matters, anyone can see</p>
+            <p>Nothing really matters</p>
+            <p>Nothing really matters to me</p>
+        </div>
+        <div class="fixed bottom-0 left-0 right-0 bg-[var(--background-color)] border-t border-[var(--chord-color)] shadow-t-lg max-w-sm mx-auto">
+            <div class="flex justify-around" id="tabs">
+                <button class="tab-btn flex-1 py-4 text-center text-[var(--chord-color)] border-b-4 border-transparent active" data-tab="lyrics">
+                    <i class="material-icons">music_note</i>
+                    <span class="block text-xs">Cantá y tocá</span>
+                </button>
+                <button class="tab-btn flex-1 py-4 text-center text-[var(--chord-color)] border-b-4 border-transparent" data-tab="playlist">
+                    <i class="material-icons">playlist_play</i>
+                    <span class="block text-xs">Lista de temas</span>
+                </button>
+                <button class="tab-btn flex-1 py-4 text-center text-[var(--chord-color)] border-b-4 border-transparent" data-tab="support">
+                    <i class="material-icons">favorite_border</i>
+                    <span class="block text-xs">Apoyá la movida</span>
+                </button>
+            </div>
+        </div>
+        <div class="hidden" id="tab-content-container">
+            <div class="tab-content active" id="lyrics-content">
+            </div>
+            <div class="tab-content p-4 bg-[var(--background-color)] min-h-screen" id="playlist-content">
+                <section class="mb-6">
+                    <section class="pt-6">
+                        <div class="relative">
+                            <input class="w-full pl-10 pr-4 py-3 bg-white rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-[var(--details-color)] text-[var(--text-color)] placeholder-[var(--chord-color)]" placeholder="Buscá un tema..." type="text"/>
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="material-icons text-[var(--chord-color)]">search</i>
+                            </div>
+                        </div>
+                    </section>
 
-<header>
-    <h1>🎹 Chicha Piano Bar</h1>
-    <p>Música popular, comunidad y buena onda</p>
-</header>
-
-<section class="mision">
-    <h2>🎯 Misión</h2>
-    <p>Acercarle a la gente un cancionero de música popular para armar una fiesta alrededor de eso, con buen nivel musical y buena onda. Generar un espacio comunitario para conectarse consigo misma, con otras personas y con la música.</p>
-</section>
-
-<section class="vision">
-    <h2>🔭 Visión</h2>
-    <p>Ser el mejor espacio musical popular comunitario de CABA/Buenos Aires.</p>
-</section>
-
-<section class="valores">
-    <h2>❤️ Valores</h2>
-    <ul>
-        <li>No lo hacemos por la plata, lo hacemos por la gloria, la felicidad, por la comunidad (por Perón, dicen algunos).</li>
-        <li>La música es de todos.</li>
-        <li>Que se autosustenten las iniciativas como el cancionero.</li>
-    </ul>
-</section>
-
-<footer>
-    <p>Seguinos en Instagram</p>
-    <a class="btn-instagram" href="https://instagram.com/chichapianobar" target="_blank">📷 @chichapianobar</a>
-</footer>
-
-</body>
-</html>
+                    <ul class="divide-y divide-[var(--chord-color)] mt-8">
+                        <li class="p-4 flex justify-between items-center bg-[var(--details-color)]">
+                            <div>
+                                <p class="font-medium text-[var(--text-color)]">Bohemian Rhapsody</p>
+                                <p class="text-sm text-[var(--chord-color)]">Queen</p>
+                            </div>
+                            <i class="material-icons text-[var(--text-color)]">how_to_vote</i>
+                        </li>
+                        <li class="p-4 flex justify-between items-center hover:bg-[var(--background-color)]">
+                            <div>
+                                <p class="font-medium text-[var(--text-color)]">Stairway to Heaven</p>
+                                <p class="text-sm text-[var(--chord-color)]">Led Zeppelin</p>
+                            </div>
+                            <i class="material-icons text-[var(--chord-color)]">how_to_vote</i>
+                        </li>
+                        <li class="p-4 flex justify-between items-center hover:bg-[var(--background-color)]">
+                            <div>
+                                <p class="font-medium text-[var(--text-color)]">Hotel California</p>
+                                <p class="text-sm text-[var(--chord-color)]">Eagles</p>
+                            </div>
+                            <i class="material-icons text-[var(--chord-color)]">how_to_vote</i>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="tab-content p-4 bg-[var(--background-color)] min-h-screen" id="support-content">
+                <section class="p-6">
+                    <h2 class="text-lg font-semibold mb-4 text-[var(--text-color)]">Apoyá la movida</h2>
+                    <p class="text-[var(--chord-color)] mb-4">Si te gustó Chicha Piano Bar, por favor considerá apoyarnos con una pequeña contribución. ¡Todo suma!</p>
+                    <div class="bg-white rounded-lg p-4 flex items-center justify-between">
+                        <div>
+                            <p class="text-sm text-[var(--chord-color)]">Alias</p>
+                            <p class="font-mono text-lg text-[var(--text-color)]">chichapianobar</p>
+                        </div>
+                        <button class="bg-[var(--button-background)] text-white rounded-full p-2 hover:bg-[var(--chord-color)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--button-background)]">
+                            <i class="material-icons">content_copy</i>
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script>
+        const tabs = document.getElementById('tabs');
+        const tabButtons = tabs.querySelectorAll('.tab-btn');
+        const tabContents = document.getElementById('tab-content-container');
+        const mainContent = document.querySelector('main > .lyrics-container');
+        const mainHeader = document.querySelector('header');
+        const songTitle = document.querySelector('main > div:first-child');
+        tabs.addEventListener('click', (e) => {
+            const button = e.target.closest('.tab-btn');
+            if (!button) return;
+            const tab = button.dataset.tab;
+            tabButtons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            button.classList.add('active');
+            if (tab === 'lyrics') {
+                tabContents.classList.add('hidden');
+                mainContent.classList.remove('hidden');
+                mainHeader.classList.remove('hidden');
+                songTitle.classList.remove('hidden');
+                document.body.style.backgroundColor = 'var(--background-color)';
+            } else {
+                mainContent.classList.add('hidden');
+                mainHeader.classList.add('hidden');
+                songTitle.classList.add('hidden');
+                tabContents.classList.remove('hidden');
+                document.body.style.backgroundColor = 'var(--background-color)';
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(`${tab}-content`).classList.add('active');
+            }
+        });
+    </script>
+</div>
+</body></html>
